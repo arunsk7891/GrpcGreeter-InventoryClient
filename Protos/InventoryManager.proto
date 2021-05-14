@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+
+option csharp_namespace = "GrpcGreeterClient";
+
+
+
+package Invent;
+
+// The greeting service definition.
+service Inventor {
+  // Sends a greeting
+  rpc SayHello (InventorRequest) returns (InventorReply);
+}
+
+// The request message containing the user's name.
+message InventorRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message InventorReply {
+  string message = 1;
+}
